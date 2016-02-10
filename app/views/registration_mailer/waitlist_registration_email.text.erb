@@ -1,0 +1,11 @@
+Dear <%= @user.full_name %>,
+<%= "\r" %>
+Thank you for your interest for the <%= @event_date.strftime('%Y') %> Apple Picking Event. Due to popularity and interest, registration is full, and you have been placed on our waitlist.
+<%= "\r" %>
+Thank you,
+<%= "\r\r" %>
+Signature here
+<%= "\r" %>
+*If you are no longer able or interested in attending, follow the below link to cancel your reservation.
+<%= "\r" %>
+<%= cancel_registrant_url(@user.uuid) %>

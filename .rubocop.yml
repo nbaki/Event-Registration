@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - db/**/*
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+# Configuration parameters: AllowURI.
+Metrics/LineLength:
+  Max: 120
+
+# Offense count: 2
+# Configuration parameters: AllowURI.
+Metrics/MethodLength:
+  Max: 30

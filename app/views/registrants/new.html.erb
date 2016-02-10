@@ -1,0 +1,32 @@
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    Registrants.init();
+  });
+<% end %>
+
+<% content_for :title do %>
+  <h1 class="blue font-bold">APPLE PICKING EVENT</h1>
+<% end %>
+<% content_for :subhead do %>
+  <p class="blue center">An event for all ages!</p>
+<% end %>
+
+
+<div id="register-form" class="col-md-7">
+
+<%= simple_form_for @registrant do |f| %>
+    <div id="register-header">
+      <h1 class="blue">Registration Form</h1>
+      <p>Please complete the form to register for this event. You will receive a confirmation email when you register.</p>
+    </div>
+      <%= f.input :first_name, label: 'First Name', required: true %>
+      <%= f.input :last_name, label: 'Last Name', required: true %>
+      <%= f.input :dob, required: true, label: 'Date of Birth', as: :date,
+                  order: [:day, :month, :year], include_blank: true,
+                  start_year: Date.today.year - 100, end_year: Date.today.year %>
+      <%= f.input :email, required: true, placeholder: 'user@domain.com', input_html: {size: 50} %>
+      <div class="center">
+        <%= f.button :submit, 'Register', class: 'btn-info btn-lg register-btn' %>
+      </div>
+<% end %>
+</div>

@@ -1,0 +1,17 @@
+
+<p>Dear <%= @user.full_name %>,</p>
+<p>
+  Thank you for your interest for the <%=@event_date.strftime('%Y') %> Apple Picking Event.
+<p>
+  Should space become available, you will be automatically added to the registration list and an email notification will be sent.
+</p>
+<p>
+  Thank you,
+</p>
+<p>
+  Signature here
+</p>
+<p>
+  *If you are no longer able or interested in attending, please click <%= link_to 'here', cancel_registrant_url(@user.uuid) %> to cancel your reservation.
+</p>
+

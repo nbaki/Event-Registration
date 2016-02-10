@@ -1,0 +1,21 @@
+<% content_for :title do %>
+    <h1 class="blue font-bold">A SAMPLE EVENT REGISTRATION</h1>
+<% end %>
+
+<div id='content' class='row-fluid'>
+  <div class='col-md-7 center'>
+    <p class="blue font-xlarge font-bold">APPLE PICKING EVENT:</p>
+    <p class="blue">A fun event for all ages!</p>
+    <p class="font-large font-bold inner-spacer"><%= @event_dates.event_start.strftime('%A, %B %d, %Y') %></p>
+    <p>9:00 a.m. - 3:00 p.m.</p>
+    <p class="font-medium font-bold inner-spacer">Address</p>
+    <p class="inner-spacer font-bold">REGISTRATION IS REQUIRED AND LIMITED</br>TO THE FIRST <%= @event_dates.max_registrants %> REGISTRANTS</p>
+    <p class="inner-spacer">
+      <% if Time.now > @event_dates.registration_open %>
+        <%= link_to 'Register Now!', new_registrant_path, class: 'btn btn-info register-btn' %>
+      <% else %>
+        Registration will open on <%= @event_dates.registration_open.strftime('%A, %B %d, %Y') %>
+      <% end %>
+    </p>
+  </div>
+</div>

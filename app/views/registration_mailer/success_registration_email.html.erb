@@ -1,0 +1,12 @@
+<p>Dear <%= @user.full_name %>,</p>
+<p>
+  We are excited you plan to attend "Apple Picking Event". Your attendance is confirmed for
+  <%= @event_date.strftime('%A, %B %d, %Y') %>.
+</p>
+<p>
+  Waitlist description goes here..
+</p>
+<p><%= link_to 'CLICK HERE TO CANCEL YOUR REGISTRATION', cancel_registrant_url(@user.uuid) %></p>
+<p>
+  Signature
+</p>

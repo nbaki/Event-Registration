@@ -1,0 +1,21 @@
+<header class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="logo">
+        <%= link_to image_tag("http://www.texasbungalow.com/events.jpg", alt: "Event",
+                              size: "213x200"), main_app.root_path %>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="app_brand center">
+        <% if content_for?(:title) %>
+          <%= content_for(:title) %>
+        <% end %>
+          <% if content_for?(:subhead) %>
+            <%= content_for(:subhead) %>
+          <% end %>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</header>

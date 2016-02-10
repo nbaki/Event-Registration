@@ -1,0 +1,12 @@
+<p>
+  <% if @registrant.status.status == 'Registered' %>
+  Thank you for registering for the <%= @event_dates.year %> Apple Picking Event.<br/>
+  You will receive an email registration confirmation shortly.<br/>
+  We look forward to seeing you on <%= @event_dates.event_start.strftime('%A, %B %d, %Y') %>.
+  <% else %>
+  Thank you for your interest in the <%= @event_dates.year %> Apple Picking Event.<br/>
+  At this time our program is full and you are currently on our waitlist.<br/>
+  You will receive a waitlist confirmation shortly.<br/>
+  Should space open on our registration list, you will be notified immediately by email.
+  <% end %>
+</p>

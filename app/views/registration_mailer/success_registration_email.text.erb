@@ -1,0 +1,12 @@
+Dear <%= @user.full_name %>,
+<%= "\r" %>
+We are excited you plan to attend "Apple Picking Event". Your attendance is confirmed for
+<%= @event_date.strftime('%A, %B %d, %Y') %>.
+<%= "\r" %>
+More description goes here..
+<%= "\r" %>
+TO CANCEL YOUR REGISTRATION, FOLLOW THE BELOW LINK
+<%= "\r" %>
+<%= cancel_registrant_url(@user.uuid) %>
+<%= "\r\r" %>
+Signature here
